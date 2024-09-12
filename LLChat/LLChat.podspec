@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LLChat"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A short description of LLChat."
 
   # This description is used to generate tags and improve search results.
@@ -95,6 +95,8 @@ Pod::Spec.new do |spec|
   spec.source_files  = "LLChat/LLChat.framework/Headers/*.{h,m}"
   spec.vendored_frameworks = 'LLChat/LLChat.framework'
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64' }
+  # spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 x86_64' }
+
 
   # spec.exclude_files = "Classes/Exclude"
 

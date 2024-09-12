@@ -9,13 +9,15 @@
 #ifndef LLClient_h
 #define LLClient_h
 
+#include<string>
 #include "LLCommon.h"
+using namespace std;
 
 class LLClient
 {
 public:
     
-//    static std::string StartUpApiKTool(const char *aApiK, unsigned long time);
+    static std::string StartUpApiKTool(const char *aApiK, unsigned long time);
     
     LLClient(int _port, int _pid, int _uin, const char* _ip);
     
