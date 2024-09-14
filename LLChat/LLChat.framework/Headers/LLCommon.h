@@ -18,288 +18,253 @@ typedef void (*ONTIMER)(void* para);
 
 //////////////////////////////////////////////////////////////////////////
 //jsonkey define
-#define JSKEY_SYSMSGTYPE    "sysMsgType"    //系统消息类型
-#define JSKEY_LANGUAGE        "language"        //语言种类
-#define JSKEY_TERMVER       "termVer"       //客户端终端版本
-#define JSKEY_TERMVERVAL    "termVerVal"    //终端值
-#define JSKEY_CMD            "cmd"            //命令号
-#define JSKEY_SUBCMD        "subcmd"        //子命令号
-#define JSKEY_RESULT        "result"        //返回值
-#define JSKEY_PACKETID        "packetid"        //应用层发包时间戳
-#define JSKEY_PACKETKEY        "packetkey"        //应用层发包时间戳
-#define JSKEY_GIFEXPERIENCE "gifexperience" //礼物经验值
-#define JSKEY_DEVTYPE        "deviceType"    //设备类型
-#define JSKEY_FORBITTIME    "forBitTime"    //禁言剩余时间
-#define JSKEY_BLOCKTIME        "blockTime"        //加入黑名单剩余时间
-#define JSKEY_PACKETINDEX    "packetindex"
-#define JSKEY_TOTALPACKET    "totalpacket"
-#define JSKEY_HIDE            "bHide"
-#define JSKEY_SERVER_STATE    "serverState"
-#define JSKEY_TIPS            "tips"            //
-#define JSKEY_USEWEBRTC        "useWebRTC"        //是否使用webrtc
+#define LLKEY__SYSMSGTYPE    "sysMsgType"    //系统消息类型
+#define LLKEY__LANGUAGE        "language"        //语言种类
+#define LLKEY__TERMVER       "termVer"       //客户端终端版本
+#define LLKEY__TERMVERVAL    "termVerVal"    //终端值
+#define LLKEY__CMD            "cmd"            //命令号
+#define LLKEY__SUBCMD        "subcmd"        //子命令号
+#define LLKEY__RESULT        "result"        //返回值
+#define LLKEY__PACKETID        "packetid"        //应用层发包时间戳
+#define LLKEY__PACKETKEY        "packetkey"        //应用层发包时间戳
+#define LLKEY__GIFEXPERIENCE "gifexperience" //礼物经验值
+#define LLKEY__DEVTYPE        "deviceType"    //设备类型
+#define LLKEY__FORBITTIME    "forBitTime"    //禁言剩余时间
+#define LLKEY__BLOCKTIME        "blockTime"        //加入黑名单剩余时间
+#define LLKEY__PACKETINDEX    "packetindex"
+#define LLKEY__TOTALPACKET    "totalpacket"
+#define LLKEY__HIDE            "bHide"
+#define LLKEY__SERVER_STATE    "serverState"
+#define LLKEY__TIPS            "tips"            //
+#define LLKEY__USEWEBRTC        "useWebRTC"        //是否使用webrtc
 
-#define JSKEY_PID            "pid"
-#define JSKEY_UIN            "uin"
-#define JSKEY_PASS            "password"        //用户密码
-#define JSKEY_MACADDR        "macaddr"        //设备id
-#define JSKEY_DEVNUM        "devNum"        //移动设备唯一识别码
-#define JSKEY_BINDLOGIN        "bindLogin"        //是否乐淘绑定登录
-#define JSKEY_PASSTYPE        "passType"        //密码类型
-#define JSKEY_SRCUIN        "srcUin"        //源uin
-#define JSKEY_SRCNICK        "srcNick"
-#define JSKEY_DSTUIN        "dstUin"        //目标uin
-#define JSKEY_DSTNICK        "dstNick"
-#define JSKEY_DELUIN        "deluin"        //将要被替换删除的帐号
-#define JSKEY_ADDUIN        "adduin"        //将要被设置为房管的帐号
-#define JSKEY_MICUIN        "micUin"        //在麦uin
-#define JSKEY_MICUIN1        "micUin1"        //1麦uin
-#define JSKEY_MICUIN2        "micUin2"        //2麦uin
-#define JSKEY_MICUIN3        "micUin3"        //3麦uin
-#define JSKEY_MICTIME        "micTime"        //在麦剩余时间
-#define JSKEY_MICQUEUEINDEX    "micQueueIndex"    //麦序列表中的第几位 从零开始
-#define JSKEY_ROOMID        "roomid"        //房间id
-#define JSKEY_ROOMNAME        "roomName"        //房间名称
-#define JSKEY_ROOMPASS        "roomPassword"    //房间密码
-#define JSKEY_ROOMOWNER        "roomOwnuin"    //室主uin
-#define JSKEY_ROOMDES        "roomDescript"    //房间描述
-#define JSKEY_ROOMBROADCAST    "roomBroadcast"    //房间广播
-#define JSKEY_ROOMPUBLIC    "roomIspublic"    //房间是否开放
-#define JSKEY_ROOMMAXINDEX    "roomMaxcfuser"    //房间最大视频个数
-#define JSKEY_ROOMMICINDEX    "micIndex"        //几号麦
-#define JSKEY_JOINCONF_FLAG "joinConfFlag"  //标识上麦还是下麦
-#define JSKEY_ROOMMAXMICLIST    "roomMaxMicQueue"    //房间最大排麦数
-#define JSKEY_ROOMSTATE        "roomOpenstatus"//房间状态
-#define JSKEY_ROOMAUTOMIC    "roomAutoMic"    //是否自动排麦
-#define JSKEY_ROOMSIZE        "roomSize"        //房间最大用户数
-#define JSKEY_ROOMMAXMGR    "roomMaxMgr"    //最大房管
-#define JSKEY_ROOMCRUUNUM    "roomCurrNum"    //房间当前人数
-#define JSKEY_ROOMMICLIST    "roomMicList"    //房间麦序列表
-#define JSKEY_USERNICK        "userNick"        //用户昵称
-#define JSKEY_CUSTOMFACE    "customface"    //头像版本
-#define JSKEY_USERRANK        "rank"            //用户管理身份
-#define JSKEY_USERTYPE        "userType"        //全局性用户属性 具体参见comm/im/imdefine.h    CTaoleGlobleUserType
-#define JSKEY_LEVEL            "level"            //会员等级
-#define JSKEY_LORDLEVEL        "lordLevel"        //爵位等级
-#define JSKEY_ACTIVETYPE    "activeType"    //活动类型
-#define JSKEY_ACTIVEIDENTIFY "activeIdentify"    //活动身份
-#define JSKEY_USERIDENTIFY "userIdentify"    //用户身份
-#define JSKEY_SHOWUIN       "showuin"        //用于显示的uin，主要用于靓号
-#define JSKEY_LOGINEXT      "loginExt"      //登录扩展信息
-#define JSKEY_STYLETYPE        "styleType"        //身份&风格
-#define JSKEY_USERLIST        "userList"        //用户列表
-#define JSKEY_ENTERTITLE    "enter_title"    //进入房间显示的标题
-#define JSKEY_ENTERPIC        "enter_pic"        //进入房间显示的图片
-#define JSKEY_ACLCTRL        "aclctrlstr"    //权限列表
-#define JSKEY_MAXMICTIME    "maxMicTime"    //房间表演麦，一麦，最大麦时
-#define JSKEY_MICLIMIT        "micLimit"        //限制使用
-#define JSKEY_CANDRAG        "canDrag"        //是否允许被抱麦
-#define JSKEY_REDPAPER        "disableRedPaper"//红包开关
-#define JSKEY_DSTLEVEL        "dstLevel"
-#define JSKEY_DSTRANK        "dstRank"
-#define JSKEY_DSTUSERTYPE    "dstUserType"
-#define JSKEY_DSTACTIVETYPE        "dstActiveType"        //活动类型
-#define JSKEY_DSTACTIVEIDENTIFY "dstActiveIdentify"    //活动身份
-#define JSKEY_SHARE_EXP            "shareExp"            //分享经验
-#define JSKEY_OFFLINE_MSGNUM    "offlinemsgnum"     //离线消息的条数
-#define JSKEY_USER_ONROOM       "userIsOnRoom"      //用户是否在房间中
-#define JSKEY_ATTACH_INFO       "attachInfo"        //不同类型消息附加信息
-#define JSKEY_UNIQUE_TIME       "uniqueTime"        //消息唯一性时间
-#define JSKEY_ADDFRIEND_FLAG    "addFriendFlag"     //1 request 0 agree
-#define JSKEY_ADDFRIEND_REMARK  "addFriendRemark"   //添加好友备注
-#define JSKEY_FRIENDCIR_ACTION  "friendCirAction"   //朋友圈操作动作
-#define JSKEY_DYNAIMIC_ID       "dynamicId"         //动态id
-#define JSKEY_TEXT_ID           "textId"            //动态中消息id
-#define JSKEY_SEND_UNILIST      "sendUinList"       //通知的用户列表
-#define JSKEY_SESSION_ID        "sessionId"         //会话id
-#define JSKEY_VIDEO_ACTION      "videoAction"       //音视频或者音频
-#define JSKEY_OPT_ACTION        "optAction"         //操作 0 request 1 agree 2 disagree
-#define JSKEY_GROUPID           "groupId"           //群组id
-#define JSKEY_MSGID              "msgId"            //群消息id
-#define JSKEY_CLIENTVER          "clientVer"           //客户端版本号
-#define JSKEY_CLIENTCHANNEL      "clientChannel"            //客户端渠道
+#define LLKEY__PID            "pid"
+#define LLKEY__UIN            "uin"
+#define LLKEY__PASS            "password"        //用户密码
+#define LLKEY__MACADDR        "macaddr"        //设备id
+#define LLKEY__DEVNUM        "devNum"        //移动设备唯一识别码
+#define LLKEY__BINDLOGIN        "bindLogin"        //是否乐淘绑定登录
+#define LLKEY__PASSTYPE        "passType"        //密码类型
+#define LLKEY__SRCUIN        "srcUin"        //源uin
+#define LLKEY__SRCNICK        "srcNick"
+#define LLKEY__DSTUIN        "dstUin"        //目标uin
+#define LLKEY__DSTNICK        "dstNick"
+#define LLKEY__DELUIN        "deluin"        //将要被替换删除的帐号
+#define LLKEY__ADDUIN        "adduin"        //将要被设置为房管的帐号
+#define LLKEY__MICUIN        "micUin"        //在麦uin
+#define LLKEY__MICUIN1        "micUin1"        //1麦uin
+#define LLKEY__MICUIN2        "micUin2"        //2麦uin
+#define LLKEY__MICUIN3        "micUin3"        //3麦uin
+#define LLKEY__MICTIME        "micTime"        //在麦剩余时间
+#define LLKEY__MICQUEUEINDEX    "micQueueIndex"    //麦序列表中的第几位 从零开始
+#define LLKEY__ROOMID        "roomid"        //房间id
+#define LLKEY__ROOMNAME        "roomName"        //房间名称
+#define LLKEY__ROOMPASS        "roomPassword"    //房间密码
+#define LLKEY__ROOMOWNER        "roomOwnuin"    //室主uin
+#define LLKEY__ROOMDES        "roomDescript"    //房间描述
+#define LLKEY__ROOMBROADCAST    "roomBroadcast"    //房间广播
+#define LLKEY__ROOMPUBLIC    "roomIspublic"    //房间是否开放
+#define LLKEY__ROOMMAXINDEX    "roomMaxcfuser"    //房间最大视频个数
+#define LLKEY__ROOMMICINDEX    "micIndex"        //几号麦
+#define LLKEY__JOINCONF_FLAG "joinConfFlag"  //标识上麦还是下麦
+#define LLKEY__ROOMMAXMICLIST    "roomMaxMicQueue"    //房间最大排麦数
+#define LLKEY__ROOMSTATE        "roomOpenstatus"//房间状态
+#define LLKEY__ROOMAUTOMIC    "roomAutoMic"    //是否自动排麦
+#define LLKEY__ROOMSIZE        "roomSize"        //房间最大用户数
+#define LLKEY__ROOMMAXMGR    "roomMaxMgr"    //最大房管
+#define LLKEY__ROOMCRUUNUM    "roomCurrNum"    //房间当前人数
+#define LLKEY__ROOMMICLIST    "roomMicList"    //房间麦序列表
+#define LLKEY__USERNICK        "userNick"        //用户昵称
+#define LLKEY__CUSTOMFACE    "customface"    //头像版本
+#define LLKEY__USERRANK        "rank"            //用户管理身份
+#define LLKEY__USERTYPE        "userType"        //全局性用户属性 具体参见comm/im/imdefine.h    CTaoleGlobleUserType
+#define LLKEY__LEVEL            "level"            //会员等级
+#define LLKEY__LORDLEVEL        "lordLevel"        //爵位等级
+#define LLKEY__ACTIVETYPE    "activeType"    //活动类型
+#define LLKEY__ACTIVEIDENTIFY "activeIdentify"    //活动身份
+#define LLKEY__USERIDENTIFY "userIdentify"    //用户身份
+#define LLKEY__SHOWUIN       "showuin"        //用于显示的uin，主要用于靓号
+#define LLKEY__LOGINEXT      "loginExt"      //登录扩展信息
+#define LLKEY__STYLETYPE        "styleType"        //身份&风格
+#define LLKEY__USERLIST        "userList"        //用户列表
+#define LLKEY__ENTERTITLE    "enter_title"    //进入房间显示的标题
+#define LLKEY__ENTERPIC        "enter_pic"        //进入房间显示的图片
+#define LLKEY__ACLCTRL        "aclctrlstr"    //权限列表
+#define LLKEY__MAXMICTIME    "maxMicTime"    //房间表演麦，一麦，最大麦时
+#define LLKEY__MICLIMIT        "micLimit"        //限制使用
+#define LLKEY__CANDRAG        "canDrag"        //是否允许被抱麦
+#define LLKEY__REDPAPER        "disableRedPaper"//红包开关
+#define LLKEY__DSTLEVEL        "dstLevel"
+#define LLKEY__DSTRANK        "dstRank"
+#define LLKEY__DSTUSERTYPE    "dstUserType"
+#define LLKEY__DSTACTIVETYPE        "dstActiveType"        //活动类型
+#define LLKEY__DSTACTIVEIDENTIFY "dstActiveIdentify"    //活动身份
+#define LLKEY__SHARE_EXP            "shareExp"            //分享经验
+#define LLKEY__OFFLINE_MSGNUM    "offlinemsgnum"     //离线消息的条数
+#define LLKEY__USER_ONROOM       "userIsOnRoom"      //用户是否在房间中
+#define LLKEY__ATTACH_INFO       "attachInfo"        //不同类型消息附加信息
+#define LLKEY__UNIQUE_TIME       "uniqueTime"        //消息唯一性时间
+#define LLKEY__ADDFRIEND_FLAG    "addFriendFlag"     //1 request 0 agree
+#define LLKEY__ADDFRIEND_REMARK  "addFriendRemark"   //添加好友备注
+#define LLKEY__FRIENDCIR_ACTION  "friendCirAction"   //朋友圈操作动作
+#define LLKEY__DYNAIMIC_ID       "dynamicId"         //动态id
+#define LLKEY__TEXT_ID           "textId"            //动态中消息id
+#define LLKEY__SEND_UNILIST      "sendUinList"       //通知的用户列表
+#define LLKEY__SESSION_ID        "sessionId"         //会话id
+#define LLKEY__VIDEO_ACTION      "videoAction"       //音视频或者音频
+#define LLKEY__OPT_ACTION        "optAction"         //操作 0 request 1 agree 2 disagree
+#define LLKEY__GROUPID           "groupId"           //群组id
+#define LLKEY__MSGID              "msgId"            //群消息id
+#define LLKEY__CLIENTVER          "clientVer"           //客户端版本号
+#define LLKEY__CLIENTCHANNEL      "clientChannel"            //客户端渠道
 
-#define JSKEY_AVSAMPLE        "roomAudiosampleindex"    //新码流控制
-#define JSKEY_AVBITRATE        "roomAudiobitrateindex"    //音频采样控制
-#define JSKEY_AVPORT        "roomAvPort"            //媒体端口
-#define    JSKEY_AVIP            "roomAvIP"                //媒体ip
-#define JSKEY_AVKEY            "roomAvSingnature"        //媒体密码
+#define LLKEY__AVSAMPLE        "roomAudiosampleindex"    //新码流控制
+#define LLKEY__AVBITRATE        "roomAudiobitrateindex"    //音频采样控制
+#define LLKEY__AVPORT        "roomAvPort"            //媒体端口
+#define    LLKEY__AVIP            "roomAvIP"                //媒体ip
+#define LLKEY__AVKEY            "roomAvSingnature"        //媒体密码
 
-#define JSKEY_MONEY            "money"            //用户虚拟币
-#define JSKEY_RECEIVED        "received"        //用户礼金
-#define JSKEY_BANKMONEY     "bankmoney"     // 背包账户
-#define JSKEY_ACCOUNTSTATE    "accountState"    //礼金账户类型
-#define JSKEY_SHAREMONEY    "shareMoney"
+#define LLKEY__MONEY            "money"            //用户虚拟币
+#define LLKEY__RECEIVED        "received"        //用户礼金
+#define LLKEY__BANKMONEY     "bankmoney"     // 背包账户
+#define LLKEY__ACCOUNTSTATE    "accountState"    //礼金账户类型
+#define LLKEY__SHAREMONEY    "shareMoney"
 
-#define JSKEY_RICHORDER        "richOrder"        //富豪排行
+#define LLKEY__RICHORDER        "richOrder"        //富豪排行
 
-#define JSKEY_PRIZEMONEY    "prizeCount"    //中奖总金额
-#define JSKEY_PRIZELIST        "prizeList"        //中奖列表
-#define JSKEY_GIFTID        "giftid"        //礼物id
-#define JSKEY_AMOUNT        "amount"        //礼物个数
-#define JSKEY_COUNT            "giftcount"        //累计个数
-#define JSKEY_GIFTNAME        "giftName"        //礼物名字
-#define JSKEY_GIFTURL        "giftPicUrl"    //礼物图片url
-#define JSKEY_PRICE            "prize"            //价格
-#define JSKEY_GIFTID1        "giftid1"
-#define JSKEY_GIFTID2        "giftid2"
-#define JSKEY_AMOUNT1        "amount1"
-#define JSKEY_AMOUNT2        "amount2"
-#define JSKEY_ONMICLIST        "micList"        //上麦列表
-#define JSKEY_FILTERIP        "filterIp"        //是否过滤ip
+#define LLKEY__PRIZEMONEY    "prizeCount"    //中奖总金额
+#define LLKEY__PRIZELIST        "prizeList"        //中奖列表
+#define LLKEY__GIFTID        "giftid"        //礼物id
+#define LLKEY__AMOUNT        "amount"        //礼物个数
+#define LLKEY__COUNT            "giftcount"        //累计个数
+#define LLKEY__GIFTNAME        "giftName"        //礼物名字
+#define LLKEY__GIFTURL        "giftPicUrl"    //礼物图片url
+#define LLKEY__PRICE            "prize"            //价格
+#define LLKEY__GIFTID1        "giftid1"
+#define LLKEY__GIFTID2        "giftid2"
+#define LLKEY__AMOUNT1        "amount1"
+#define LLKEY__AMOUNT2        "amount2"
+#define LLKEY__ONMICLIST        "micList"        //上麦列表
+#define LLKEY__FILTERIP        "filterIp"        //是否过滤ip
 
-#define JSKEY_COLOR            "color"            //字体颜色
-#define JSKEY_FONTSIZE        "fontsize"        //字体大小
-#define JSKEY_BOLD            "isbold"        //是否粗体
-#define JSKEY_ACTIONTYPE    "actionType"    //动作类型
-#define JSKEY_MSG            "msgText"        //文本信息
-#define JSKEY_ITALIC        "isitalic"        //是否斜体
-#define JSKEY_ONTOCP        "showOnTopPlace"    //是否滚动显示
+#define LLKEY__COLOR            "color"            //字体颜色
+#define LLKEY__FONTSIZE        "fontsize"        //字体大小
+#define LLKEY__BOLD            "isbold"        //是否粗体
+#define LLKEY__ACTIONTYPE    "actionType"    //动作类型
+#define LLKEY__MSG            "msgText"        //文本信息
+#define LLKEY__ITALIC        "isitalic"        //是否斜体
+#define LLKEY__ONTOCP        "showOnTopPlace"    //是否滚动显示
 
-#define    JSKEY_CHATPUBLIC    "ispublic"            //是否公聊
-#define JSKEY_CHATTIME        "msgtime"            //聊天时间
-#define JSKEY_CHATTYPE        "type"                //聊天类型
+#define    LLKEY__CHATPUBLIC    "ispublic"            //是否公聊
+#define LLKEY__CHATTIME        "msgtime"            //聊天时间
+#define LLKEY__CHATTYPE        "type"                //聊天类型
 
-#define JSKEY_CHATRANDOM1    "randNum1"            //掷骰子随机数1
-#define JSKEY_CHATRANDOM2    "randNum2"            //掷骰子随机数2
+#define LLKEY__CHATRANDOM1    "randNum1"            //掷骰子随机数1
+#define LLKEY__CHATRANDOM2    "randNum2"            //掷骰子随机数2
 
-#define JSKEY_STAMPID        "stampID"            //印章id
-#define JSKEY_STAMPTIME        "stampTime"            //印章剩余时间
-#define JSKEY_STAMPLIST        "stampList"
-#define JSKEY_STAMREVERSE    "stampReverse"
+#define LLKEY__STAMPID        "stampID"            //印章id
+#define LLKEY__STAMPTIME        "stampTime"            //印章剩余时间
+#define LLKEY__STAMPLIST        "stampList"
+#define LLKEY__STAMREVERSE    "stampReverse"
 
-#define JSKEY_KICKFLAG        "flag"                //踢出房间类型
-#define JSKEY_KICKTYPE        "actionType"        //被踢出房间的 挤出房间，被踢出房间等
+#define LLKEY__KICKFLAG        "flag"                //踢出房间类型
+#define LLKEY__KICKTYPE        "actionType"        //被踢出房间的 挤出房间，被踢出房间等
 
-#define JSKEY_FORBIDORNOT    "forbidOrNot"        //1.禁言 0.解禁
-#define JSKEY_FORBIDDEN_TYPR "forbiddenType"     //主播禁言。0全体禁言，1.全体都可以发言。2.只有在榜单上的用户可以发言
-#define JSKEY_IP            "ip"
-#define JSKEY_PORT            "port"
+#define LLKEY__FORBIDORNOT    "forbidOrNot"        //1.禁言 0.解禁
+#define LLKEY__FORBIDDEN_TYPR "forbiddenType"     //主播禁言。0全体禁言，1.全体都可以发言。2.只有在榜单上的用户可以发言
+#define LLKEY__IP            "ip"
+#define LLKEY__PORT            "port"
 
-#define JSKEY_GIFTVER        "giftver"
-#define JSKEY_STAMPVER        "stampver"
-#define JSKEY_SORTVER        "sortver"
-#define JSKEY_BROADCASEPRICE    "broadCasePrice"
-#define JSKEY_DISCOUNT            "discount"
+#define LLKEY__GIFTVER        "giftver"
+#define LLKEY__STAMPVER        "stampver"
+#define LLKEY__SORTVER        "sortver"
+#define LLKEY__BROADCASEPRICE    "broadCasePrice"
+#define LLKEY__DISCOUNT            "discount"
 #define JSEKY_SINGERGIFT_MOUNEY    "singerGiftMoney"
-#define JSKEY_REPAPERID            "redPaperID"
+#define LLKEY__REPAPERID            "redPaperID"
 
 
-#define JSKEY_EXPRESSIONLIST        "expressionList"
-#define JSKEY_EXPRESSIONID            "expressionid"
-#define JSKEY_EXPRESSIONPACKETID    "expressionPacketid"
-#define JSKEY_EXPRESSIONNUM            "expressionNum"
-#define JSKEY_EXPRESSIONINDEX        "expressionIndex"
+#define LLKEY__EXPRESSIONLIST        "expressionList"
+#define LLKEY__EXPRESSIONID            "expressionid"
+#define LLKEY__EXPRESSIONPACKETID    "expressionPacketid"
+#define LLKEY__EXPRESSIONNUM            "expressionNum"
+#define LLKEY__EXPRESSIONINDEX        "expressionIndex"
 
 
-#define JSKEY_VIEWSTATE                "viewState"
-#define JSKEY_VIEWID                "vid"
-#define JSKEY_LAUDCOUNT                "laudCount"
-#define JSKEY_TIMESTAMP                "timeStamp"
-#define JSKEY_GETVID                "getVid"
-#define JSKEY_ROOMVID                "roomVid"
-#define JSKEY_VIDRES                "vidRes"
-#define JSKEY_GIFTORDER                "giftOrder"
+#define LLKEY__VIEWSTATE                "viewState"
+#define LLKEY__VIEWID                "vid"
+#define LLKEY__LAUDCOUNT                "laudCount"
+#define LLKEY__TIMESTAMP                "timeStamp"
+#define LLKEY__GETVID                "getVid"
+#define LLKEY__ROOMVID                "roomVid"
+#define LLKEY__VIDRES                "vidRes"
+#define LLKEY__GIFTORDER                "giftOrder"
 
-#define JSKEY_TOTALRECV                "totalRecved"
-#define JSKEY_CHARMVALUE            "charmValue"
-#define JSKEY_SRC_FACE                "srcFace"
-#define JSKEY_DST_FACE                "dstFace"
-#define JSKEY_KIND                    "kind"
-#define JSKEY_WRITEHISTORY            "writeHistroy"        //是否写入回放记录
-#define JSKEY_COMBO                    "comboCount"        //连击次数
-#define JSKEY_DELAY                    "comboDelay"        //连击延迟重置
-#define JSKEY_UINLIST                "uinList"            //帐号列表
-#define JSKEY_MSGVER                "msgVer"            //轮播消息版本号
-#define JSKEY_MSGVERDELAY            "delayMsgVer"        //轮播消息版本号
-#define JSKEY_SERVERTIMESTAMP        "serverTimeStamp"    //服务器时间戳
-#define JSKEY_MULTIPLE              "multiple"          //中奖倍数//活动相关
-#define JSKEY_ACTIVE_LIST            "activeList"        //活动列表
-#define JSKEY_ACTIVE_NAME            "activeName"        //活动名字
-#define JSKEY_ACTIVE_ID                "activeID"            //活动id
-#define JSKEY_ACTIVE_ICON            "activeIcon"        //活动图标
-#define JSKEY_ACTIVE_START            "activeStart"        //开始时间
-#define JSKEY_ACTIVE_END            "activeEnd"            //结束时间
-#define JSKEY_ACTIVE_KIND            "activeKind"        //显示类型
-#define JSKEY_ACTIVE_OWNURL            "activeOwnurl"        //活动地址 主播
-#define JSKEY_ACTIVE_URL            "activeurl"            //活动地址 观看者
-#define JSKEY_ACTIVE_SCORE            "activeScore"        //活动积分
-#define JSKEY_ACTIVE_ORDER            "activeOrder"        //活动排名
-
-
-#define JSKEY_DIAMOND                "diamond"            //钻石
-#define JSKEY_DIAMONDRECV            "diamondReceived"    //钻石劵
-#define JSKEY_DIAMONDEXP            "diamondExp"        //钻石经验
-#define JSKEY_ECHOPUBLIC            "echoPubilc"        //是否公聊区显示
-#define JSKEY_ECHOPRIVETE            "echoPrivate"        //是否私聊区显示
-#define JSKEY_ORDER                    "order"                //排名
-#define JSKEY_LIST                    "list"                //列表
-#define JSKEY_SONGNAME                "songName"            //歌名
-#define JSKEY_AUDIO                    "disableAudio"        //声音开关
-#define JSKEY_VIDEO                    "disableVideo"        //视频开关
-#define JSKEY_STREAM                "roomStreamPrv"        //码流
-#define JSKEY_FRAMERATE                "frameRatePrv"        //帧率
-#define JSKEY_NEWUIN                "newUin"            //新帐号
-#define JSKEY_NEWNICK                "newNick"            //新昵称
-#define JSKEY_SRCRANKNAME            "srcRankName"        //攻城礼物 称号
-#define JSKEY_DSTRANKNAME            "dstRankName"        //攻城礼物 称号
-#define JSKEY_TOTALTIME                "totalTime"            //总时间
-#define JSKEY_SPANTIME                "spanTime"            //成功守城时间
-#define JSKEY_ID                    "id"                //id
-#define JSKEY_WINMONDY                "winMoney"            //挖中的奖励
-#define JSKEY_CURRMONEY                "currMoney"            //当前金币
-#define JSKEY_ITEMNAME                "itemName"            //中奖项目
-#define JSKEY_FREECOUNT                "freeCount"            //免费次数
-#define JSKEY_MAXWINMONDY            "maxAwardMoney"        //最大开奖金额
-#define JSKEY_FREEINTERVAL            "freeInterval"        //免费间隔
-#define JSKEY_ANCHORUIN                "anchorUin"            //主播uin
-#define JSKEY_ORIGINAL                "original"            //原创
-#define JSKEY_BBLACKIP                "bBlackIp"            //是否封锁ip
-#define JSKEY_BBLACKMAC                "bBlackMac"            //是否封锁mac
-#define JSKEY_BBLACKUIN                "bBlackUin"            //是否封锁uin
+#define LLKEY__TOTALRECV                "totalRecved"
+#define LLKEY__CHARMVALUE            "charmValue"
+#define LLKEY__SRC_FACE                "srcFace"
+#define LLKEY__DST_FACE                "dstFace"
+#define LLKEY__KIND                    "kind"
+#define LLKEY__WRITEHISTORY            "writeHistroy"        //是否写入回放记录
+#define LLKEY__COMBO                    "comboCount"        //连击次数
+#define LLKEY__DELAY                    "comboDelay"        //连击延迟重置
+#define LLKEY__UINLIST                "uinList"            //帐号列表
+#define LLKEY__MSGVER                "msgVer"            //轮播消息版本号
+#define LLKEY__MSGVERDELAY            "delayMsgVer"        //轮播消息版本号
+#define LLKEY__SERVERTIMESTAMP        "serverTimeStamp"    //服务器时间戳
+#define LLKEY__MULTIPLE              "multiple"          //中奖倍数//活动相关
+#define LLKEY__ACTIVE_LIST            "activeList"        //活动列表
+#define LLKEY__ACTIVE_NAME            "activeName"        //活动名字
+#define LLKEY__ACTIVE_ID                "activeID"            //活动id
+#define LLKEY__ACTIVE_ICON            "activeIcon"        //活动图标
+#define LLKEY__ACTIVE_START            "activeStart"        //开始时间
+#define LLKEY__ACTIVE_END            "activeEnd"            //结束时间
+#define LLKEY__ACTIVE_KIND            "activeKind"        //显示类型
+#define LLKEY__ACTIVE_OWNURL            "activeOwnurl"        //活动地址 主播
+#define LLKEY__ACTIVE_URL            "activeurl"            //活动地址 观看者
+#define LLKEY__ACTIVE_SCORE            "activeScore"        //活动积分
+#define LLKEY__ACTIVE_ORDER            "activeOrder"        //活动排名
 
 
+#define LLKEY__DIAMOND                "diamond"            //钻石
+#define LLKEY__DIAMONDRECV            "diamondReceived"    //钻石劵
+#define LLKEY__DIAMONDEXP            "diamondExp"        //钻石经验
+#define LLKEY__ECHOPUBLIC            "echoPubilc"        //是否公聊区显示
+#define LLKEY__ECHOPRIVETE            "echoPrivate"        //是否私聊区显示
+#define LLKEY__ORDER                    "order"                //排名
+#define LLKEY__LIST                    "list"                //列表
+#define LLKEY__SONGNAME                "songName"            //歌名
+#define LLKEY__AUDIO                    "disableAudio"        //声音开关
+#define LLKEY__VIDEO                    "disableVideo"        //视频开关
+#define LLKEY__STREAM                "roomStreamPrv"        //码流
+#define LLKEY__FRAMERATE                "frameRatePrv"        //帧率
+#define LLKEY__NEWUIN                "newUin"            //新帐号
+#define LLKEY__NEWNICK                "newNick"            //新昵称
+#define LLKEY__SRCRANKNAME            "srcRankName"        //攻城礼物 称号
+#define LLKEY__DSTRANKNAME            "dstRankName"        //攻城礼物 称号
+#define LLKEY__TOTALTIME                "totalTime"            //总时间
+#define LLKEY__SPANTIME                "spanTime"            //成功守城时间
+#define LLKEY__ID                    "id"                //id
+#define LLKEY__WINMONDY                "winMoney"            //挖中的奖励
+#define LLKEY__CURRMONEY                "currMoney"            //当前金币
+#define LLKEY__ITEMNAME                "itemName"            //中奖项目
+#define LLKEY__FREECOUNT                "freeCount"            //免费次数
+#define LLKEY__MAXWINMONDY            "maxAwardMoney"        //最大开奖金额
+#define LLKEY__FREEINTERVAL            "freeInterval"        //免费间隔
+#define LLKEY__ANCHORUIN                "anchorUin"            //主播uin
+#define LLKEY__ORIGINAL                "original"            //原创
+#define LLKEY__BBLACKIP                "bBlackIp"            //是否封锁ip
+#define LLKEY__BBLACKMAC                "bBlackMac"            //是否封锁mac
+#define LLKEY__BBLACKUIN                "bBlackUin"            //是否封锁uin
+
+#define LLKEY__FINAL_USER_STATUS     "finalUserStatus"   //决赛用户状态
+#define LLKEY__TIMEINTERVAL          "timeInterval"      //时间间隔
+#define LLKEY__MIC1_STATUS           "mic1Status"        //1号麦声音状态
+#define LLKEY__MIC2_STATUS           "mic2Status"        //2号麦声音状态
+#define LLKEY__TICKET_NUM            "ticketNum"         //票数
+#define LLKEY__DATATYPE              "dataType"          //数据类型
 
 
-//////////////////////////////////////////////////////////////////////////
-//碰碰车相关定义
-#define JSKEY_PPC_JETTON_LIST        "ppcJettonList"        //筹码列表
-#define JSKEY_PPC_LIITLIST            "ppcBetLimitList"    //所有区域押注上限
-#define JSKEY_PPC_AREAINDEX            "ppcAreaIndex"        //押注项
-#define JSKEY_PPC_BETMONEY            "ppcBetMoney"        //押注金额
-#define JSKEY_PPC_MAXPLACEAREA        "ppcMaxPlaceArea"    //当前区域剩余可压金额
-#define JSKEY_PPC_BETRESULT            "ppcBetResult"        //押注结果
-#define JSKEY_PPC_EXPERIENCE        "Experience"        //用户经验
-#define JSKEY_PPC_AWARDITEM            "ppcAwardItem"        //中奖结果
-#define JSKEY_PPC_AROUND            "ppcAround"            //局数
-#define JSKEY_PPC_DELAYTIME            "ppcDelayTime"        //延迟时间 秒
-#define JSKEY_PPC_UPDATELIST        "ppcUpdateList"        //更新列表
-#define JSKEY_PPC_BETALLLIST        "ppcBetAllList"        //个区域押注总额列表
-
-#define JSKEY_PPC_BANKERSCORE        "ppcBankerScore"    //庄家得分（当局输赢）
-#define JSKEY_PPC_BANKERTOTALSOCRE    "ppcBankerTotalScore"    //总输赢
-#define JSKEY_PPC_BANKERMONEY        "ppcBankerMoney"    //庄家总钱数
-#define JSKEY_PPC_BANKERTIMES        "ppcBankerTimes"    //坐庄次数
-#define JSKEY_PPC_BANKERUIN            "ppcBankerUin"        //庄家uin
-#define JSKEY_PPC_USERSCORE            "ppcUserScore"        //玩家得分（当局输赢）
-#define JSKEY_PPC_GAMETAX            "ppcTax"            //游戏税收
-#define JSKEY_PPC_SUCCESS            "bSuccess"            //操作是否成功
-#define JSKEY_PPC_WIN                "bWin"                //当局输赢
-#define JSKEY_PPC_BANKERWAITLIST    "ppcBankerWaitList" //申请上庄列表
-#define JSKEY_PPC_HISTORYLIST        "ppcHistoryList"    //历史中奖列表
-#define JSKEY_PPC_MAXHISTORY        "ppcMaxHistorySize" //历史中奖记录最大保存多少条
-#define JSKEY_PPC_CURRHISTORY        "ppcCurrHistorySize"//当前下发多少条
-#define JSKEY_PPC_JETTION            "ppcJetton"            //筹码
-#define JSKEY_PPC_BANKERLIMIT        "ppcBankerCondition"//庄家限制
-#define JSKEY_PPC_USERLIMIT            "ppcUserLimit"//庄家限制
-
-//////////////////////////////////////////////////////////////////////////
-//才艺决赛
-#define JSKEY_FINAL_USER_STATUS     "finalUserStatus"   //决赛用户状态
-#define JSKEY_TIMEINTERVAL          "timeInterval"      //时间间隔
-#define JSKEY_MIC1_STATUS           "mic1Status"        //1号麦声音状态
-#define JSKEY_MIC2_STATUS           "mic2Status"        //2号麦声音状态
-#define JSKEY_TICKET_NUM            "ticketNum"         //票数
-#define JSKEY_DATATYPE              "dataType"          //数据类型
 
 enum ChatUserType
 {
